@@ -91,8 +91,8 @@ function setTree() {
         .append("text")
             .attr("x", 0)
             .attr("y", 14)
-            .text("Civil War Soldiers by Home-State")
-            .attr("font-size", "22px")
+            .text("Civil War Soldiers in thousands")
+            .attr("font-size", "16px")
             .attr("fill", "grey" )
 });
 
