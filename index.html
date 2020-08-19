@@ -14,7 +14,12 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!--personalized CSS -->
   <link href="css/style.css" rel="stylesheet">
-
+  <link rel="leaflet" href="lib/leaflet.css">
+  <link rel="stylesheet" href="CSS/normalize.css"/>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
 
 </head>
 
@@ -25,10 +30,24 @@
 	<div id="sidebar-wrapper">
 		<ul class="sidebar-nav" id="side_bar">
 			<li class="sidebar-brand" style="font-weight: bold; color: #999999;">
-				<h1>Places</h1>
+				<h1>Places Test</h1>
 			</li>
 			<hr>
 		</ul>
+    <div class="filter-panel">
+      <div class="col-xs-4">
+    		<input class="database-check" type= "radio" name="database" id="all" value="all-casualties" checked="checked">
+    		<label class="form-check-label" for="all" id='all-casualties'>All Casualties</label>
+      </div>
+			<div class="col-xs-4">
+    		<input class="database-check" type= "radio" name="database" id="union" value="union-casualties">
+    		<label class="form-check-label" for="union" id='union-casualties'>Union Casualties</label>
+      </div>
+      <div class="col-xs-4">
+    		<input class="database-check" type= "radio" name="database" id="confederate" value="confederate-casualties">
+    		<label class="form-check-label" for="confederate" id='confederate-casualties'>Confederate Casualties</label>
+      </div>
+  	</div>
 	</div>
 	<!-- /#sidebar-wrapper -->
 	<!-- Page Content -->
@@ -44,7 +63,6 @@
 					<div id="mapCanvas" style="position: relative; overflow: hidden;">
 					</div>
           <div id="treemap">
-            <h3>A look into soldiers who joined the war by home-state</h3>
           </div>
         </div>
 			</div>
@@ -54,9 +72,15 @@
 </div>
 
   <!-- Bootstrap core JavaScript -->
+  <script src="lib/leaflet-src.js"></script>
   <script src="lib/jquery-3.5.1.js"></script>
   <script src="lib/bootstrap.bundle.min.js"></script>
-  <!-- d3 and main JavaScript -->
+
+  <!-- leaflet, mapbox, d3, and main JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+  crossorigin=""></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
   <script src="https://d3js.org/d3.v4.js"></script>
   <script src="js/main.js"></script>
 
