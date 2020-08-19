@@ -1,0 +1,235 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "battle": "The Battle of Shiloh",
+        "date": "April 6-7, 1862",
+        "location": "Tennessee",
+        "confederateCommander": "Albert Sidney Johnston/P.G.T. Beauregard",
+        "unionCommander": "Ulysses S. Grant",
+        "engagedConfederateForces": "40,335",
+        "engagedUnionForces": "62,682",
+        "winner": "Federals",
+        "totalCasualties": 23741,
+        "confederateCasualties": 10694,
+        "unionCasualties": 13047
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.3218,
+          35.1507
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "battle": "The Battle of Second Manassas (Second Bull Run)",
+        "date": "August 29-30, 1862",
+        "location": "Virginia",
+        "confederateCommander": "Robert E. Lee",
+        "unionCommander": "John Pope",
+        "engagedConfederateForces": "48,527",
+        "engagedUnionForces": "75,696",
+        "winner": "Confederacy",
+        "totalCasualties": 25251,
+        "confederateCasualties": 9197,
+        "unionCasualties": 16054
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.5213,
+          38.8125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "battle": "The Battle of Stone's River (Murfreesboro)",
+        "date": "December 31, 1862 - January 3, 1863",
+        "location": "Tennessee",
+        "confederateCommander": "Braxton Bragg",
+        "unionCommander": "William S. Roscrans",
+        "engagedConfederateForces": "37,739",
+        "engagedUnionForces": "41,400",
+        "winner": "Federals",
+        "totalCasualties": 24645,
+        "confederateCasualties": 11739,
+        "unionCasualties": 12906
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.266,
+          35.5248
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "battle": "The Battle of Fort Donelson",
+        "date": "February 13-16, 1862",
+        "location": "Tennessee",
+        "confederateCommander": "John B. Floyd / Simon B. Buckner",
+        "unionCommander": "Ulysses S. Grant",
+        "engagedConfederateForces": "21,000",
+        "engagedUnionForces": "27,000",
+        "winner": "Federals",
+        "totalCasualties": 19455,
+        "confederateCasualties": 16623,
+        "unionCasualties": 2832
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.5122,
+          36.2938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "battle": "The Battle of Gettysburg",
+        "date": "July 1-3, 1863",
+        "location": "Pennsylvania",
+        "confederateCommander": "Robert E. Lee",
+        "unionCommander": "George G. Meade",
+        "engagedConfederateForces": "75,000",
+        "engagedUnionForces": "82,289",
+        "winner": "Federals",
+        "totalCasualties": 51112,
+        "confederateCasualties": 28063,
+        "unionCasualties": 23049
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.2325,
+          39.818
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "battle": "Battle of Chancellorsville",
+        "date": "May 1-4, 1863",
+        "location": "Virginia",
+        "confederateCommander": "Robert E. Lee",
+        "unionCommander": "Joseph Hooker",
+        "engagedConfederateForces": "60,892",
+        "engagedUnionForces": "133,868",
+        "winner": "Confederacy",
+        "totalCasualties": 30099,
+        "confederateCasualties": 12821,
+        "unionCasualties": 17278
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.6487,
+          38.3115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "battle": "The Battle of the Wilderness",
+        "date": "May 5-7, 1864",
+        "location": "Virginia",
+        "confederateCommander": "Robert E. Lee",
+        "unionCommander": "Ulysses S. Grant",
+        "engagedConfederateForces": "61,025",
+        "engagedUnionForces": "101,895",
+        "winner": "Inconclusive",
+        "totalCasualties": 25416,
+        "confederateCasualties": 7750,
+        "unionCasualties": 17666
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.4535,
+          38.1859
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "battle": "Battle of Spotsylvania",
+        "date": "May 8-19, 1864",
+        "location": "Virginia",
+        "confederateCommander": "Robert E. Lee",
+        "unionCommander": "Ulysses S. Grant",
+        "engagedConfederateForces": "50,000",
+        "engagedUnionForces": "83,000",
+        "winner": "Confederacy",
+        "totalCasualties": 27399,
+        "confederateCasualties": 9000,
+        "unionCasualties": 18399
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.3619,
+          38.1338
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "battle": "Battle of Antietam (Sharpsburg)",
+        "date": "September 17, 1862",
+        "location": "Maryland",
+        "confederateCommander": "Robert E. Lee",
+        "unionCommander": "George B. McClellan",
+        "engagedConfederateForces": "51,844",
+        "engagedUnionForces": "75,316",
+        "winner": "Draw",
+        "totalCasualties": 26134,
+        "confederateCasualties": 13724,
+        "unionCasualties": 12410
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.7447,
+          39.4732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "battle": "Battle of Chickamauga",
+        "date": "September 19-20, 1863",
+        "location": "North Georgia",
+        "confederateCommander": "Braxton Bragg",
+        "unionCommander": "William S. Roscrans",
+        "engagedConfederateForces": "66,326",
+        "engagedUnionForces": "58,222",
+        "winner": "Confederacy",
+        "totalCasualties": 34624,
+        "confederateCasualties": 18454,
+        "unionCasualties": 16170
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.2606,
+          34.9176
+        ]
+      }
+    }
+  ]
+}
