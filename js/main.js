@@ -7,7 +7,7 @@ setTree();
 function setTree() {
 
   var margin = {top: 10, right: 10, bottom: 10, left: 10},
-      width = 500 - margin.left - margin.right,
+      width = 620 - margin.left - margin.right,
       height = 850 - margin.top - margin.bottom;
 
   var svg = d3.select("#treemap")
