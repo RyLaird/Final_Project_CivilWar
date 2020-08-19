@@ -1,6 +1,7 @@
 //first line of main.js. wrap everything in a self-executing anonymous function to move to a local scope
 (function(){
 
+
 setTree();
 
 function setTree() {
@@ -97,4 +98,18 @@ function setTree() {
 });
 
 };
+
+var myWrapper = $("#wrapper");
+$("#menu-toggle").click(function(e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+  myWrapper.one(
+    "webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend",
+    function(e) {
+      // code to execute after transition ends
+      google.maps.event.trigger(map, "resize");
+    }
+  );
+});
+
 })(); //last line of main.js
