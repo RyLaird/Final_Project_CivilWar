@@ -560,5 +560,20 @@ function setTree() {
             .attr("fill", "grey" )
 });
 
-};
+}; //last line of setTree
+
+var myWrapper = $("#wrapper");
+$("#menu-toggle").click(function(e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+  myWrapper.one(
+    "webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend",
+    function(e) {
+      // code to execute after transition ends
+      //google.maps.event.trigger(map, "resize");
+    }
+  );
+});
+
+
 })(); //last line of tree map

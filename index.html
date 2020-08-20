@@ -13,9 +13,10 @@
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!--personalized CSS -->
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/leafletMap.css">
   <link rel="leaflet" href="lib/leaflet.css">
-  <link rel="stylesheet" href="CSS/normalize.css"/>
+  <link rel="stylesheet" href="css/normalize.css"/>
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
   crossorigin=""/>
@@ -62,10 +63,11 @@
 					<!-- you can use tables or divs for the overall layout -->
 					<div id="mapCanvas" style="position: relative; overflow: hidden;">
 					</div>
-          <div id="treemap">
-          </div>
         </div>
 			</div>
+    <div class="row">
+      <div id="treemap" class="col d-flex justify-content-center">
+      </div>
 		</div>
 	</div>
 	<!-- /#page-content-wrapper -->
