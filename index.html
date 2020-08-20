@@ -15,7 +15,7 @@
   <!--personalized CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/leafletMap.css">
-  <link rel="leaflet" href="lib/leaflet.css">
+  <link rel="stylesheet" href="css/leaflet.css">
   <link rel="stylesheet" href="css/normalize.css"/>
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -32,30 +32,30 @@
 		<ul class="sidebar-nav" id="side_bar">
 			<li class="sidebar-brand" style="font-weight: bold; color: #999999;">
 				<h1>Places Test</h1>
+        <div class="filter-panel">
+          <div class="col-xs-4">
+            <input class="database-check" type= "radio" name="database" id="all" value="all-casualties" checked="checked">
+            <label class="form-check-label" for="all" id='all-casualties'>All Casualties</label>
+          </div>
+          <div class="">
+            <input class="database-check" type= "radio" name="database" id="union" value="union-casualties">
+            <label class="form-check-label" for="union" id='union-casualties'>Union Casualties</label>
+          </div>
+          <div class="col-xs-4">
+            <input class="database-check" type= "radio" name="database" id="confederate" value="confederate-casualties">
+            <label class="form-check-label" for="confederate" id='confederate-casualties'>Confederate Casualties</label>
+          </div>
+        </div>
 			</li>
 			<hr>
 		</ul>
-    <div class="filter-panel">
-      <div class="col-xs-4">
-    		<input class="database-check" type= "radio" name="database" id="all" value="all-casualties" checked="checked">
-    		<label class="form-check-label" for="all" id='all-casualties'>All Casualties</label>
-      </div>
-			<div class="col-xs-4">
-    		<input class="database-check" type= "radio" name="database" id="union" value="union-casualties">
-    		<label class="form-check-label" for="union" id='union-casualties'>Union Casualties</label>
-      </div>
-      <div class="col-xs-4">
-    		<input class="database-check" type= "radio" name="database" id="confederate" value="confederate-casualties">
-    		<label class="form-check-label" for="confederate" id='confederate-casualties'>Confederate Casualties</label>
-      </div>
-  	</div>
 	</div>
 	<!-- /#sidebar-wrapper -->
 	<!-- Page Content -->
 	<div id="page-content-wrapper">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col d-flex justify-content-center">
+				<div class="col-lg-12">
 					<h1>
 						<a href="#menu-toggle" class="gradient-menu" id="menu-toggle"></a> &nbsp;Map&nbsp;
 						<!-- a href="#menu-toggle" class="btn btn-default" >Toggle Sidebar</a -->
@@ -71,6 +71,7 @@
 		</div>
 	</div>
 	<!-- /#page-content-wrapper -->
+</div>
 </div>
 
   <!-- Bootstrap core JavaScript -->
