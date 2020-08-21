@@ -94,15 +94,13 @@ footer {
 }
 
 ul {
-  text-align: center;
+  text-align: left;
   font-size: 10px;
   list-style-position: inside;
   display: inline-block;
 }
 
-html {
-    background-color: #cbf2cb;
-}
+
 
 
 .leaflet-popup
