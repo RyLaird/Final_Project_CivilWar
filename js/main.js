@@ -556,7 +556,7 @@ function setTree() {
         .append("text")
             .attr("x", 0)
             .attr("y", 14)
-            .text("Civil War Soldiers by Home-State")
+            .text("Soldiers who joined the Civil War by Home-State")
             .attr("font-size", "22px")
             .attr("fill", "grey" )
 });

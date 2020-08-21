@@ -198,6 +198,9 @@ body {
 	display: block;
 }
 
+img[alt~="memorial"] {
+	border-radius: 15px;
+}
 @media (min-width: 768px) {
 	#wrapper {
 		padding-left: 250px;
