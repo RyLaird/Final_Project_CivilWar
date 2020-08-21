@@ -526,6 +526,7 @@ function setTree() {
           .attr("y", function(d){ return d.y0+20})
           .text(function(d) { return d.data.state })
           .attr("font-size", "16px")
+          .attr("font-weight", "400")
           .attr("fill", "white")
           .attr("word-break", "break-all")
     svg
@@ -535,8 +536,8 @@ function setTree() {
         .append("text")
           .attr("x", function(d){ return d.x0+5})
           .attr("y", function(d){ return d.y0+35})
-          .text(function(d){ return d.data.value })
-          .attr("font-size", "12px")
+          .text(function(d){ return (d.data.value).toLocaleString("en-US") })
+          .attr("font-size", "15px")
           .attr("fill", "white")
 
     svg
