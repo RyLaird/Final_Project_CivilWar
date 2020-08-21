@@ -144,6 +144,7 @@ function createPropSymbols(data, attributes, keyword){
 
     //create a Leaflet GeoJSON layer and add it to the map
     mapSymbols = L.geoJson(data, {
+        onEachFeature: onEachFeature,
         pointToLayer: function(feature, latlng){
             return pointToLayer(feature, latlng, attributes, keyword);
         }
@@ -574,7 +575,15 @@ $("#menu-toggle").click(function(e) {
       //google.maps.event.trigger(map, "resize");
     }
   );
-});
+}); //last line of myWrapper
+
+function onEachFeature(feature, layer) {
+  layer.on('click', function(e) {
+    $(".battle").html(feature.properties.battle);
+    $(".image").html(feature.properties.image);
+    $(".description").html(feature.properties.description);
+  });
+}
 
 
 })(); //last line of tree map

@@ -5,6 +5,8 @@
       "type": "Feature",
       "properties": {
         "battle": "The Battle of Shiloh",
+        "description": "The Battle of Shiloh, also known as the Battle of Pittsburg Landing, took place from April 6 to April 7, 1862, and was one of the major early engagements of the American Civil War (1861-65). The battle began when the Confederate Army launched a surprise attack on Union forces under General Ulysses S. Grant (1822-85) in southwestern Tennessee. After initial successes, the Confederates were unable to hold their positions and were forced back, resulting in a Union victory. Both sides suffered heavy losses, with more than 23,000 total casualties, and the level of violence shocked North and South alike.",
+        "image" : "<img src='/images/shiloh.png' alt='shiloh' width='200px'/>",
         "date": "April 6-7, 1862",
         "location": "Tennessee",
         "confederateCommander": "Albert Sidney Johnston/P.G.T. Beauregard",
