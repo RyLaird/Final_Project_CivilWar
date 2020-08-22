@@ -201,6 +201,7 @@ body {
 img[alt~="memorial"] {
 	border-radius: 15px;
 }
+
 @media (min-width: 768px) {
 	#wrapper {
 		padding-left: 250px;
@@ -227,15 +228,22 @@ img[alt~="memorial"] {
 		position: relative;
 		margin-right: 0;
 	}
+}
 
 .battle {
 	color: white;
+	text-shadow: 2px 2px 8px #F9EEDC;
 	font-size: 24px;
 	line-height: 40px;
 }
 
 .description {
+	color: white;
 	font-size: 12px;
 	line-height: 30px;
 }
+
+.citation, .historyLink {
+	font-size:10px;
+	line-height:20px;
 }

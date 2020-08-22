@@ -11,7 +11,7 @@ var mapSymbols; // Proportional Symbols
 var LegendControl; // Legend
 var dataStats = {min:21, max:51, mean:30}; //manually created values for the total combined numbers
 var centerPoint = [38, -87];
-var zoomLevel = 4;
+var zoomLevel = 5;
 
 //Declare Database global variables
 var dataSelected = ["all-casualties"]
@@ -26,18 +26,18 @@ function createMap(){
         center: centerPoint,
         zoom: zoomLevel,
         minZoom: 3,
-        maxZoom: 12,
+        maxZoom: 18,
         maxBounds: [[75, -180], [-30, 180]], // [top, left], [bottom, right]
         attributionControl: false
     });
 
     //Add OSM base tilelayer
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    L.tileLayer('https://api.mapbox.com/styles/v1/rlaird2/cke5xsfyc0ixj19qa684x5n2m/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicmxhaXJkMiIsImEiOiJja2JmN2x6aWIwc3VmMzVvNDl5Mzk1ejNuIn0.rrNaMaCy39_ntp7qPvp0dQ', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        id: 'mapbox/outdoors-v11',
+        id: 'rlaird2/cke5xsfyc0ixj19qa684x5n2m',
         zoomOffset: -1,
         tileSize: 512,
-        accessToken: 'pk.eyJ1IjoibWFyay13b2p0YSIsImEiOiJja2R1cDFqODcwMW90MnRxNTUycDl2azQyIn0.SfngBeDYSXdejPNUNPUMXQ'
+        accessToken: 'pk.eyJ1IjoicmxhaXJkMiIsImEiOiJja2JmN2x6aWIwc3VmMzVvNDl5Mzk1ejNuIn0.rrNaMaCy39_ntp7qPvp0dQ'
     }).addTo(map);
 
     // Add zoom control (but in top right)
@@ -275,6 +275,7 @@ function createPopup(properties, attributes, keyword){
         popupContent += "<p>Battle's Total Casualties: <b>" + properties[attributes] + " personnel</b></p>";
         //added states containing MSA
         popupContent += "<p>State Location of Battle: <b>" + properties.location + "</b></p>";
+        popupContent += "<i>*view sidebar for additional information</i>";
     } else if (dataSelected[0] === "union-casualties") {
         var popupContent = "<p><b>" + properties.battle + "</b></p>";
         //add city to popup content string
@@ -286,6 +287,7 @@ function createPopup(properties, attributes, keyword){
         popupContent += "<p>Battle's Total Casualties: <b>" + properties[attributes] + " personnel</b></p>";
         //added states containing MSA
         popupContent += "<p>State Location of Battle: <b>" + properties.location + "</b></p>";
+        popupContent += "<i>*view sidebar for additional information</i>";
     } else if (dataSelected[0] === "confederate-casualties") {
         var popupContent = "<p><b>" + properties.battle + "</b></p>";
         //add city to popup content string
@@ -297,6 +299,7 @@ function createPopup(properties, attributes, keyword){
         popupContent += "<p>Battle's Total Casualties: <b>" + properties[attributes] + " personnel</b></p>";
         //added states containing MSA
         popupContent += "<p>State Location of Battle: <b>" + properties.location + "</b></p>";
+        popupContent += "<i>*view sidebar for additional information</i>";
     }
 
     return popupContent;
@@ -582,6 +585,8 @@ function onEachFeature(feature, layer) {
     $(".battle").html(feature.properties.battle);
     $(".image").html(feature.properties.image);
     $(".description").html(feature.properties.description);
+    $(".citation").html(feature.properties.citation);
+    $(".historyLink").html(feature.properties.historical);
   });
 }
 
