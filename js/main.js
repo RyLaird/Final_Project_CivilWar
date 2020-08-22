@@ -583,6 +583,8 @@ $("#menu-toggle").click(function(e) {
 function onEachFeature(feature, layer) {
   layer.on('click', function(e) {
     $(".selectBattle").remove();
+    $(".defaultDescription").remove();
+    $(".defaultCitation").remove();
     $(".battle").html(feature.properties.battle);
     $(".image").html(feature.properties.image);
     $(".description").html(feature.properties.description);
@@ -590,6 +592,5 @@ function onEachFeature(feature, layer) {
     $(".historyLink").html(feature.properties.historical);
   });
 }
-
 
 })(); //last line of tree map
