@@ -247,3 +247,9 @@ img[alt~="memorial"] {
 	font-size:10px;
 	line-height:20px;
 }
+
+.selectBattle {
+	color: white;
+	font-size: 22px;
+	line-height: 30px;
+}

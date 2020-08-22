@@ -582,6 +582,7 @@ $("#menu-toggle").click(function(e) {
 
 function onEachFeature(feature, layer) {
   layer.on('click', function(e) {
+    $(".selectBattle").remove();
     $(".battle").html(feature.properties.battle);
     $(".image").html(feature.properties.image);
     $(".description").html(feature.properties.description);
