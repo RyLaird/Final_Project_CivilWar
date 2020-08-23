@@ -592,7 +592,7 @@ function onEachFeature(feature, layer) {
     if (map.getZoom() <5) {
       map.flyTo([e.latlng.lat, e.latlng.lng], 5)
     }
-    else if (map.getZoom() >=6 && map.getZoom() <8) {
+    else if (map.getZoom() >=5 && map.getZoom() <8) {
       map.flyTo([e.latlng.lat, e.latlng.lng], 8)
     }
     else
