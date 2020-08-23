@@ -32,18 +32,24 @@ function createMap(){
     });
 
     //Add OSM base tilelayer
-    L.tileLayer('https://api.mapbox.com/styles/v1/rlaird2/cke5xsfyc0ixj19qa684x5n2m/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicmxhaXJkMiIsImEiOiJja2JmN2x6aWIwc3VmMzVvNDl5Mzk1ejNuIn0.rrNaMaCy39_ntp7qPvp0dQ', {
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        id: 'rlaird2/cke5xsfyc0ixj19qa684x5n2m',
+        id: 'mark-wojta/cke4et26s0rjo19ph3frss4zs',
         zoomOffset: -1,
         tileSize: 512,
-        accessToken: 'pk.eyJ1IjoicmxhaXJkMiIsImEiOiJja2JmN2x6aWIwc3VmMzVvNDl5Mzk1ejNuIn0.rrNaMaCy39_ntp7qPvp0dQ'
+        accessToken: 'pk.eyJ1IjoibWFyay13b2p0YSIsImEiOiJjazVpc2M0a2IwaHQzM2RtbmZpbXlodjdoIn0.piF_xAWNFZ2dxBhQ8CwXyw'
     }).addTo(map);
 
     // Add zoom control (but in top right)
     L.control.zoom({
         position: 'topright'
     }).addTo(map);
+
+    const easyButton = L.easyButton('<img src="/images/cabin.png"/>',
+    function(){map.setView([38, -87], 4)}).addTo(map);
+
+    //fix to center home icon inside of button
+    easyButton.button.style.padding ='0px';
 
     //adds Data
     getData(map);
@@ -146,6 +152,7 @@ function createPropSymbols(data, attributes, keyword){
     mapSymbols = L.geoJson(data, {
         onEachFeature: onEachFeature,
         pointToLayer: function(feature, latlng){
+
             return pointToLayer(feature, latlng, attributes, keyword);
         }
     }).addTo(map);
@@ -179,7 +186,7 @@ function pointToLayer(feature, latlng, attributes, keyword){
 
         //create marker options
         var options = {
-            fillColor: "#66A3D9",
+            fillColor: "#78BFA5",
             color: "#000",
             weight: 0.5,
             opacity: 1,
@@ -195,7 +202,7 @@ function pointToLayer(feature, latlng, attributes, keyword){
 
         //create marker options
         var options = {
-            fillColor: "#66A3D9",
+            fillColor: "#78BFA5",
             color: "#000",
             weight: 0.5,
             opacity: 1,
@@ -213,7 +220,7 @@ function pointToLayer(feature, latlng, attributes, keyword){
     } else if (attValue == 0) {
         var options = {
             radius: 0,
-            fillColor: "#ffffff",
+            fillColor: "#78BFA5",
             color: "#000",
             weight: 1,
             opacity: 0,
@@ -241,17 +248,17 @@ function calcPropRadius(attValue, keyword) {
           // Picked values that look normal
           var minValue = 1000;
           //constant factor adjusts symbol sizes evenly
-          var minRadius = 1.5;
+          var minRadius = 2.5;
       } else if (keyword === "union") {
           // Picked values that look normal
           var minValue = 1000;
           //constant factor adjusts symbol sizes evenly
-          var minRadius = 1.5;
+          var minRadius = 2.5;
       } else if (keyword === "confederate") {
           // Picked values that look normal
           var minValue = 1000;
           //constant factor adjusts symbol sizes evenly
-          var minRadius = 1.5;
+          var minRadius = 2.5;
       }
       //Flannery Appearance Compensation formula
       var radius = 1.0083 * Math.pow(attValue/minValue,0.5715) * minRadius;
@@ -272,7 +279,7 @@ function createPopup(properties, attributes, keyword){
         popupContent += "<p>Length of Battle: <b>" + properties.date + "</b></p>";
         //add formatted attribute to panel content string
         var year = attributes;
-        popupContent += "<p>Battle's Total Casualties: <b>" + properties[attributes] + " personnel</b></p>";
+        popupContent += "<p>Battle's Total Casualties: <b>" + (properties[attributes]).toLocaleString("en-US") + " personnel</b></p>";
         //added states containing MSA
         popupContent += "<p>State Location of Battle: <b>" + properties.location + "</b></p>";
         popupContent += "<i>*view sidebar for additional information</i>";
@@ -284,7 +291,7 @@ function createPopup(properties, attributes, keyword){
         popupContent += "<p>Length of Battle: <b>" + properties.date + "</b></p>";
         //add formatted attribute to panel content string
         var year = attributes;
-        popupContent += "<p>Battle's Total Casualties: <b>" + properties[attributes] + " personnel</b></p>";
+        popupContent += "<p>Total Union Casualties: <b>" + properties.unionCasualties.toLocaleString("en-US") + " personnel</b></p>";
         //added states containing MSA
         popupContent += "<p>State Location of Battle: <b>" + properties.location + "</b></p>";
         popupContent += "<i>*view sidebar for additional information</i>";
@@ -296,7 +303,7 @@ function createPopup(properties, attributes, keyword){
         popupContent += "<p>Length of Battle: <b>" + properties.date + "</b></p>";
         //add formatted attribute to panel content string
         var year = attributes;
-        popupContent += "<p>Battle's Total Casualties: <b>" + properties[attributes] + " personnel</b></p>";
+        popupContent += "<p>Total Confederate Casualties: <b>" + properties.confederateCasualties.toLocaleString("en-US") + " personnel</b></p>";
         //added states containing MSA
         popupContent += "<p>State Location of Battle: <b>" + properties.location + "</b></p>";
         popupContent += "<i>*view sidebar for additional information</i>";
@@ -318,7 +325,7 @@ function createLegend(attibute, keyword){
             if (keyword === "all") {
                 dataStats = {min:19455, max:51112, mean:27829};
                 //add temporal legend div to container
-                $(container).append('<h3 id="legend-title" <b>All Casualties</b> </h3>');
+                $(container).append('<h3 id="legend-title" <b>Total Casualties</b> </h3>');
                 //array of circle names to base loop on
                 var circles = ["max", "mean", "min"];
                 //start attribute legend svg string
@@ -343,7 +350,7 @@ function createLegend(attibute, keyword){
                     }
 
                     //text string
-                    svg += '<text id="' + circles[i] + '-text" x="130" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " casualties" + '</text>';
+                    svg += '<text id="' + circles[i] + '-text" x="90" y="' + textY + '">' + (Math.round(dataStats[circles[i]]*100)/100).toLocaleString("en-US") + " casualties" + '</text>';
                 };
                 //close svg string
                 svg += "</svg>";
@@ -364,7 +371,7 @@ function createLegend(attibute, keyword){
                     var cy = (180 - radius) -130;
 
                     //circle string
-                    svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#78BFA5" fill-opacity="1" stroke="#000000" cx="58"/>';
+                    svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#78BFA5" fill-opacity="1" stroke="#000000" cx="43"/>';
 
                     //evenly space out labels
                     if (i < 1) {
@@ -376,7 +383,7 @@ function createLegend(attibute, keyword){
                     }
 
                     //text string
-                    svg += '<text id="' + circles[i] + '-text" x="130" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " casualties" + '</text>';
+                    svg += '<text id="' + circles[i] + '-text" x="90" y="' + textY + '">' + (Math.round(dataStats[circles[i]]*100)/100).toLocaleString("en-US") + " casualties" + '</text>';
                 };
                 //close svg string
                 svg += "</svg>";
@@ -408,7 +415,7 @@ function createLegend(attibute, keyword){
                     }
 
                     //text string
-                    svg += '<text id="' + circles[i] + '-text" x="130" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " casualties" + '</text>';
+                    svg += '<text id="' + circles[i] + '-text" x="90" y="' + textY + '">' + (Math.round((dataStats)[circles[i]]*100)/100).toLocaleString("en-US") + " casualties" + '</text>';
                 };
                 //close svg string
                 svg += "</svg>";
@@ -582,15 +589,23 @@ $("#menu-toggle").click(function(e) {
 
 function onEachFeature(feature, layer) {
   layer.on('click', function(e) {
-    $(".selectBattle").remove();
-    $(".defaultDescription").remove();
-    $(".defaultCitation").remove();
-    $(".battle").html(feature.properties.battle);
-    $(".image").html(feature.properties.image);
-    $(".description").html(feature.properties.description);
-    $(".citation").html(feature.properties.citation);
-    $(".historyLink").html(feature.properties.historical);
-  });
-}
+    if (map.getZoom() <6) {
+      map.flyTo([e.latlng.lat, e.latlng.lng], 6)
+    }
+    else if (map.getZoom() >=6 && map.getZoom() <10) {
+      map.flyTo([e.latlng.lat, e.latlng.lng], 10)
+    }
+    else
+    map.flyTo([e.latlng.lat, e.latlng.lng], map.getZoom());
+  $(".selectBattle").remove();
+  $(".defaultDescription").remove();
+  $(".defaultCitation").remove();
+  $(".battle").html(feature.properties.battle);
+  $(".image").html(feature.properties.image);
+  $(".description").html(feature.properties.description);
+  $(".citation").html(feature.properties.citation);
+  $(".historyLink").html(feature.properties.historical);
+})};
+
 
 })(); //last line of tree map
