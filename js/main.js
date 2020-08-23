@@ -589,11 +589,11 @@ $("#menu-toggle").click(function(e) {
 
 function onEachFeature(feature, layer) {
   layer.on('click', function(e) {
-    if (map.getZoom() <6) {
-      map.flyTo([e.latlng.lat, e.latlng.lng], 6)
+    if (map.getZoom() <5) {
+      map.flyTo([e.latlng.lat, e.latlng.lng], 5)
     }
-    else if (map.getZoom() >=6 && map.getZoom() <10) {
-      map.flyTo([e.latlng.lat, e.latlng.lng], 10)
+    else if (map.getZoom() >=6 && map.getZoom() <8) {
+      map.flyTo([e.latlng.lat, e.latlng.lng], 8)
     }
     else
     map.flyTo([e.latlng.lat, e.latlng.lng], map.getZoom());
