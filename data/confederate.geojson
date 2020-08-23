@@ -15,7 +15,7 @@
         "unionCommander": "Ulysses S. Grant",
         "engagedConfederateForces": "40,335",
         "engagedUnionForces": "62,682",
-        "winner": "Federals",
+        "winner": "Union",
         "totalCasualties": 23741,
         "confederateCasualties": 10694,
         "unionCasualties": 13047
@@ -32,7 +32,7 @@
       "type": "Feature",
       "properties": {
         "battle": "The Battle of Second Manassas (Second Bull Run)",
-        "description":"The Second Battle of Bull Run (Manassas) proved to be the deciding battle in the Civil War campaign waged between Union and Confederate armies in northern Virginia in 1862. As a large Union force commanded by John Pope waited for George McClellan’s Army of the Potomac in anticipation of a combined offensive, Confederate General Robert E. Lee decided to strike first. Lee sent half of his Army of Northern Virginia to hit the Federal supply base at Manassas. Led by Stonewall Jackson, hero of the First Battle of Bull Run (Manassas) 13 months earlier, the rebels seized supplies and burned the depot, then established hidden positions in the woods. On August 29, Pope’s Federals clashed with Jackson’s men, who held their ground with heavy losses on both sides. The following day, after the rest of Lee’s army arrived, 28,000 rebels led by James Longstreet launched a counterattack, forcing Pope to withdraw his battered army toward Washington that night.",
+        "description":"The Second Battle of Bull Run (Manassas) proved to be the deciding battle in the Civil War campaign waged between Union and Confederate armies in northern Virginia in 1862. As a large Union force commanded by John Pope waited for George McClellan’s Army of the Potomac in anticipation of a combined offensive, Confederate General Robert E. Lee decided to strike first. Lee sent half of his Army of Northern Virginia to hit the Federal supply base at Manassas. Led by Stonewall Jackson, hero of the First Battle of Bull Run (Manassas) 13 months earlier, the rebels seized supplies and burned the depot, then established hidden positions in the woods. On August 29, Pope’s Union clashed with Jackson’s men, who held their ground with heavy losses on both sides. The following day, after the rest of Lee’s army arrived, 28,000 rebels led by James Longstreet launched a counterattack, forcing Pope to withdraw his battered army toward Washington that night.",
         "image" : "<img src='/images/stonewall.png' alt='stonewall' width='200px'/>",
         "citation": "History.com Editors, \"Second Battle of Bull Run\", 05 April 2011, accessed 20 August 2020, https://www.history.com/topics/american-civil-war/second-battle-of-bull-run",
     		"historical": "Manassas National Battlefield Park, Virginia: https://www.nps.gov/mana/index.htm",
@@ -69,7 +69,7 @@
         "unionCommander": "William S. Roscrans",
         "engagedConfederateForces": "37,739",
         "engagedUnionForces": "41,400",
-        "winner": "Federals",
+        "winner": "Union",
         "totalCasualties": 24645,
         "confederateCasualties": 11739,
         "unionCasualties": 12906
@@ -96,7 +96,7 @@
         "unionCommander": "Ulysses S. Grant",
         "engagedConfederateForces": "21,000",
         "engagedUnionForces": "27,000",
-        "winner": "Federals",
+        "winner": "Union",
         "totalCasualties": 19455,
         "confederateCasualties": 16623,
         "unionCasualties": 2832
@@ -123,7 +123,7 @@
         "unionCommander": "George G. Meade",
         "engagedConfederateForces": "75,000",
         "engagedUnionForces": "82,289",
-        "winner": "Federals",
+        "winner": "Union",
         "totalCasualties": 51112,
         "confederateCasualties": 28063,
         "unionCasualties": 23049
@@ -249,7 +249,7 @@
       "type": "Feature",
       "properties": {
         "battle": "Battle of Chickamauga",
-        "description":"On September 19-20, 1863, Braxton Bragg’s Army of Tennessee defeated a Union force commanded by General William Rosecrans in the Battle of Chickamauga, during the American Civil War. After Rosecrans’ troops pushed the Confederates out of Chattanooga early that month, Bragg called for reinforcements and launched a counterattack on the banks of nearby Chickamauga Creek. Over two days of battle, the rebels forced Rosecrans to give way, with heavy losses on both sides. Bragg failed to press his advantage after the victory, however, allowing the Federals to safely reach Chattanooga. Ulysses S. Grant soon arrived with reinforcements, allowing the Union to reverse the results of Chickamauga and score a lasting victory in the region that November.",
+        "description":"On September 19-20, 1863, Braxton Bragg’s Army of Tennessee defeated a Union force commanded by General William Rosecrans in the Battle of Chickamauga, during the American Civil War. After Rosecrans’ troops pushed the Confederates out of Chattanooga early that month, Bragg called for reinforcements and launched a counterattack on the banks of nearby Chickamauga Creek. Over two days of battle, the rebels forced Rosecrans to give way, with heavy losses on both sides. Bragg failed to press his advantage after the victory, however, allowing the Union to safely reach Chattanooga. Ulysses S. Grant soon arrived with reinforcements, allowing the Union to reverse the results of Chickamauga and score a lasting victory in the region that November.",
         "image" : "<img src='/images/chickamauga.png' alt='chickamauga' width='200px'/>",
         "citation": "History.com Editors, \"Battle of Chickamauga\", 09 November 2009, accessed 20 August 2020, https://www.history.com/topics/american-civil-war/battle-of-chickamauga",
     		"historical": "Chickamauga and Chattanooga National Military Park: Georgia and Tennessee: https://www.nps.gov/chch/index.htm",

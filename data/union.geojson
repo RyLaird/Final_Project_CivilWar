@@ -15,7 +15,7 @@
         "unionCommander": "Ulysses S. Grant",
         "engagedConfederateForces": "40,335",
         "engagedUnionForces": "62,682",
-        "winner": "Federals",
+        "winner": "Union",
         "totalCasualties": 23741,
         "confederateCasualties": 10694,
         "unionCasualties": 13047
@@ -69,7 +69,7 @@
         "unionCommander": "William S. Roscrans",
         "engagedConfederateForces": "37,739",
         "engagedUnionForces": "41,400",
-        "winner": "Federals",
+        "winner": "Union",
         "totalCasualties": 24645,
         "confederateCasualties": 11739,
         "unionCasualties": 12906
@@ -96,7 +96,7 @@
         "unionCommander": "Ulysses S. Grant",
         "engagedConfederateForces": "21,000",
         "engagedUnionForces": "27,000",
-        "winner": "Federals",
+        "winner": "Union",
         "totalCasualties": 19455,
         "confederateCasualties": 16623,
         "unionCasualties": 2832
@@ -113,7 +113,7 @@
       "type": "Feature",
       "properties": {
         "battle": "The Battle of Gettysburg",
-        "description":"The Battle of Gettysburg, fought from July 1 to July 3, 1863, is considered the most important engagement of the American Civil War. After a great victory over Union forces at Chancellorsville, General Robert E. Lee marched his Army of Northern Virginia into Pennsylvania in late June 1863. On July 1, the advancing Confederates clashed with the Union’s Army of the Potomac, commanded by General George G. Meade, at the crossroads town of Gettysburg. The next day saw even heavier fighting, as the Confederates attacked the Federals on both left and right. On July 3, Lee ordered an attack by fewer than 15,000 troops on the enemy’s center at Cemetery Ridge. The assault, known as “Pickett’s Charge,” managed to pierce the Union lines but eventually failed at the cost of thousands of rebel casualties. Lee was forced to withdraw his battered army toward Virginia on July 4. The Union had won in a major turning point, stopping Lee’s invasion of the North. It inspired Lincoln’s “Gettysburg Address,” which became one of the most famous speeches of all time.",
+        "description":"The Battle of Gettysburg, fought from July 1 to July 3, 1863, is considered the most important engagement of the American Civil War. After a great victory over Union forces at Chancellorsville, General Robert E. Lee marched his Army of Northern Virginia into Pennsylvania in late June 1863. On July 1, the advancing Confederates clashed with the Union’s Army of the Potomac, commanded by General George G. Meade, at the crossroads town of Gettysburg. The next day saw even heavier fighting, as the Confederates attacked the Union on both left and right. On July 3, Lee ordered an attack by fewer than 15,000 troops on the enemy’s center at Cemetery Ridge. The assault, known as “Pickett’s Charge,” managed to pierce the Union lines but eventually failed at the cost of thousands of rebel casualties. Lee was forced to withdraw his battered army toward Virginia on July 4. The Union had won in a major turning point, stopping Lee’s invasion of the North. It inspired Lincoln’s “Gettysburg Address,” which became one of the most famous speeches of all time.",
         "image" : "<img src='/images/gettysburg.png' alt='gettysburg' width='200px'/>",
         "citation": "History.com Editors, \"Battle of Gettysburg\", 29 October 2009, accessed 20 August 2020, https://www.history.com/topics/american-civil-war/battle-of-gettysburg",
     		"historical": "Gettysburg National Military Park, Pennsylvania: https://www.nps.gov/gett/index.htm",
@@ -123,7 +123,7 @@
         "unionCommander": "George G. Meade",
         "engagedConfederateForces": "75,000",
         "engagedUnionForces": "82,289",
-        "winner": "Federals",
+        "winner": "Union",
         "totalCasualties": 51112,
         "confederateCasualties": 28063,
         "unionCasualties": 23049
@@ -248,7 +248,7 @@
       "type": "Feature",
       "properties": {
         "battle": "Battle of Chickamauga",
-        "description":"On September 19-20, 1863, Braxton Bragg’s Army of Tennessee defeated a Union force commanded by General William Rosecrans in the Battle of Chickamauga, during the American Civil War. After Rosecrans’ troops pushed the Confederates out of Chattanooga early that month, Bragg called for reinforcements and launched a counterattack on the banks of nearby Chickamauga Creek. Over two days of battle, the rebels forced Rosecrans to give way, with heavy losses on both sides. Bragg failed to press his advantage after the victory, however, allowing the Federals to safely reach Chattanooga. Ulysses S. Grant soon arrived with reinforcements, allowing the Union to reverse the results of Chickamauga and score a lasting victory in the region that November.",
+        "description":"On September 19-20, 1863, Braxton Bragg’s Army of Tennessee defeated a Union force commanded by General William Rosecrans in the Battle of Chickamauga, during the American Civil War. After Rosecrans’ troops pushed the Confederates out of Chattanooga early that month, Bragg called for reinforcements and launched a counterattack on the banks of nearby Chickamauga Creek. Over two days of battle, the rebels forced Rosecrans to give way, with heavy losses on both sides. Bragg failed to press his advantage after the victory, however, allowing the Union to safely reach Chattanooga. Ulysses S. Grant soon arrived with reinforcements, allowing the Union to reverse the results of Chickamauga and score a lasting victory in the region that November.",
         "image" : "<img src='/images/chickamauga.png' alt='chickamauga' width='200px'/>",
         "citation": "History.com Editors, \"Battle of Chickamauga\", 09 November 2009, accessed 20 August 2020, https://www.history.com/topics/american-civil-war/battle-of-chickamauga",
     		"historical": "Chickamauga and Chattanooga National Military Park: Georgia and Tennessee: https://www.nps.gov/chch/index.htm",
